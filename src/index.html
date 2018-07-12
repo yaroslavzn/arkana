@@ -13,16 +13,22 @@
         <header class="main-header">
             <div class="header__top">
                 <div class="lang-box">
-                    <a href="#" class="lang-choose">Choose</a>
+                    <a href="#" class="lang-choose">
+                        Choose language
+                        <span class="lang-choose__line"></span>
+                    </a>
                     <ul class="lang__list">
                         <li class="lang__item"><a href="#" class="lang__link">English</a></li>
                         <li class="lang__item"><a href="#" class="lang__link">French</a></li>
                         <li class="lang__item"><a href="#" class="lang__link">Spain</a></li>
                     </ul>
                 </div>
-                <div class="search-box">
+                <div class="search">
                     <a href="#" class="search__trigger">Search</a>
-                    <input type="text" class="search__input">
+                    <form class="search__form">
+                        <input type="text" class="search__input">
+                        <button type="button" class="search__btn"></button>
+                    </form>
                 </div>
                 <div class="logo">
                     <img src="" alt="Arkana logo" class="logo__img">
@@ -36,7 +42,7 @@
                         <li class="socials__item"><a href="#" class="socials__link">Twitter</a></li>
                     </ul>
                 </div>
-                <div class="cart-box">
+                <div class="cart-wrapper">
                     <a href="#" class="cart-icon">
                         <svg class="cart-icon__img"></svg>
                         <span class="cart-icon__counter">3</span>
