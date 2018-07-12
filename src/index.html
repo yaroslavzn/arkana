@@ -5,11 +5,249 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Arkana</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
+    <div class="wrapper">
+        <header class="main-header">
+            <div class="header__top">
+                <div class="lang-box">
+                    <a href="#" class="lang-choose">Choose</a>
+                    <ul class="lang__list">
+                        <li class="lang__item"><a href="#" class="lang__link">English</a></li>
+                        <li class="lang__item"><a href="#" class="lang__link">French</a></li>
+                        <li class="lang__item"><a href="#" class="lang__link">Spain</a></li>
+                    </ul>
+                </div>
+                <div class="search-box">
+                    <a href="#" class="search__trigger">Search</a>
+                    <input type="text" class="search__input">
+                </div>
+                <div class="logo">
+                    <img src="" alt="Arkana logo" class="logo__img">
+                </div>
+                <div class="share">
+                    <a href="#" class="share__link">Share</a>
+                    <ul class="socials">
+                        <li class="socials__item"><a href="#" class="socials__link">Facebook</a></li>
+                        <li class="socials__item"><a href="#" class="socials__link">Instagram</a></li>
+                        <li class="socials__item"><a href="#" class="socials__link">Pinterest</a></li>
+                        <li class="socials__item"><a href="#" class="socials__link">Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="cart-box">
+                    <a href="#" class="cart-icon">
+                        <svg class="cart-icon__img"></svg>
+                        <span class="cart-icon__counter">3</span>
+                    </a>
+                    <div class="cart">
+                        <h2 class="cart__title">Shopping cart</h2>
+                        <ul class="cart-goods">
+                            <li class="cart-goods__item">
+                                <div class="cart-goods__pic">
+                                    <img src="" alt="Happy intarsia crewneck sweater" class="cart-goods__img">
+                                </div>
+                                <div class="cart-goods__desc">
+                                    <h3 class="cart-goods__title">Happy intarsia crewneck sweater</h3>
+                                    <p class="cart-goods__size">
+                                        Size: <span>S</span>
+                                    </p>
+                                    <p class="cart-goods__color">
+                                        Color: <span>Blue</span>
+                                    </p>
+                                    <p class="cart-goods__price">
+                                        $24.95 <span class="cart-goods__times">x</span> <span class="cart-goods__count">2</span>
+                                    </p>
+                                </div>
+                                <span class="cart__del-item">x</span>
+                            </li>
+                            <li class="cart-goods__item">
+                                <div class="cart-goods__pic">
+                                    <img src="" alt="Happy intarsia crewneck sweater" class="cart-goods__img">
+                                </div>
+                                <div class="cart-goods__desc">
+                                    <h3 class="cart-goods__title">Happy intarsia crewneck sweater</h3>
+                                    <p class="cart-goods__size">
+                                        Size: <span>S</span>
+                                    </p>
+                                    <p class="cart-goods__color">
+                                        Color: <span>Blue</span>
+                                    </p>
+                                    <p class="cart-goods__price">
+                                        $24.95 <span class="cart-goods__times">x</span> <span class="cart-goods__count">2</span>
+                                    </p>
+                                </div>
+                                <span class="cart__del-item">x</span>
+                            </li>
+                            <li class="cart-goods__item">
+                                <div class="cart-goods__pic">
+                                    <img src="" alt="Happy intarsia crewneck sweater" class="cart-goods__img">
+                                </div>
+                                <div class="cart-goods__desc">
+                                    <h3 class="cart-goods__title">Happy intarsia crewneck sweater</h3>
+                                    <p class="cart-goods__size">
+                                        Size: <span>S</span>
+                                    </p>
+                                    <p class="cart-goods__color">
+                                        Color: <span>Blue</span>
+                                    </p>
+                                    <p class="cart-goods__price">
+                                        $24.95 <span class="cart-goods__times">x</span> <span class="cart-goods__count">2</span>
+                                    </p>
+                                </div>
+                                <span class="cart__del-item">x</span>
+                            </li>
+                        </ul>
+                        <div class="cart-bill">
+                            <div class="cart-bill__top">
+                                <table class="cart-bill__parts">
+                                    <tr>
+                                        <td class="card-bill__name">3 items</td>
+                                        <td class="card-bill__price">42.95 $</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="card-bill__name">Shipping</td>
+                                        <td class="card-bill__price">7.00 $</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="card-bill__name">Taxes</td>
+                                        <td class="card-bill__price">0 $</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="cart-bill__bottom">
+                                <table class="cart-bill__total">
+                                    <tr>
+                                        <td class="card-bill__name">Total</td>
+                                        <td class="card-bill__price">42.95 $</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <a href="#" class="cart-bill__link">Processed to checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <nav class="main-nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">Dresses</a></li>
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">Blouses</a></li>
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">Tees & Tops</a></li>
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">T-shirts</a></li>
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">Outwear</a></li>
+                        <li class="main-nav__item"><a href="#" class="main-nav__link">Pans</a></li>
+                    </ul>
+                </nav>
+                <div class="big-menu">
+                    <div class="big-menu__categories">
+                        <div class="category">
+                            <h2 class="category__title">T-shirts & Blouses</h2>
+                            <ul class="category__list">
+                                <li class="category__item"><a href="#" class="category__link">Blouses</a></li>
+                                <li class="category__item"><a href="#" class="category__link category__link--active">Shirts</a></li>
+                                <li class="category__item"><a href="#" class="category__link">T-Shirts</a></li>
+                            </ul>
+                        </div>
+                        <div class="category">
+                            <h2 class="category__title">Outwear</h2>
+                            <ul class="category__list">
+                                <li class="category__item"><a href="#" class="category__link">Coats</a></li>
+                                <li class="category__item"><a href="#" class="category__link category__link--active">Hoddies & Pullovers</a></li>
+                                <li class="category__item"><a href="#" class="category__link">Jackets</a></li>
+                            </ul>
+                        </div>
+                        <div class="category">
+                            <h2 class="category__title">Warm clothes</h2>
+                            <ul class="category__list">
+                                <li class="category__item"><a href="#" class="category__link">Cardigans</a></li>
+                                <li class="category__item"><a href="#" class="category__link category__link--active">Sweaters</a></li>
+                                <li class="category__item"><a href="#" class="category__link">Sweatshirts</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="popular-prod">
+                        <ul class="popular-prod__list">
+                            <li class="popular-prod__item">
+                                <div class="popular-prod__pic">
+                                    <img src="" alt="Product photo" class="popular-prod__img">
+                                </div>
+                                <div class="popular-prod__desc">
+                                    <a href="#" class="popular-prod__link">
+                                        <h3 class="popular-prod__title">Happy intarsia crewneck sweater</h3>
+                                    </a>
+                                    <p class="popular-prod__price">
+                                        $ 199.00 <span class="popular-prod__price--old">$ 299.00</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="popular-prod__item">
+                                <div class="popular-prod__pic">
+                                    <img src="" alt="Product photo" class="popular-prod__img">
+                                </div>
+                                <div class="popular-prod__desc">
+                                    <a href="#" class="popular-prod__link">
+                                        <h3 class="popular-prod__title">Happy intarsia crewneck sweater</h3>
+                                    </a>
+                                    <p class="popular-prod__price">
+                                        $ 199.00 <span class="popular-prod__price--old">$ 299.00</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="popular-prod__item">
+                                <div class="popular-prod__pic">
+                                    <img src="" alt="Product photo" class="popular-prod__img">
+                                </div>
+                                <div class="popular-prod__desc">
+                                    <a href="#" class="popular-prod__link">
+                                        <h3 class="popular-prod__title">Happy intarsia crewneck sweater</h3>
+                                    </a>
+                                    <p class="popular-prod__price">
+                                        $ 199.00 <span class="popular-prod__price--old">$ 299.00</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="big-menu__logos">
+                        <ul class="logos__list">
+                            <li class="logos__item">Logotype</li>
+                            <li class="logos__item">Logotype</li>
+                            <li class="logos__item">Logotype</li>
+                            <li class="logos__item">Logotype</li>
+                            <li class="logos__item">Logotype</li>
+                            <li class="logos__item">Logotype</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="slider">
+                <ul class="slider__list">
+                    <li class="slider__item">
+                        <h2 class="hero__heading">Tees & Tops</h2>
+                        <div class="hero__text">
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <a href="#" class="btn">Discovery more</a>
+                    </li>
+                </ul>
+                <div class="slider__controls">
+                    <button type="button">Prev</button>
+                    <button type="button">Next</button>
+                </div>
+                <div class="slider__dots">
+                    <ul class="slider__dots-list">
+                        <li class="slider__dots-item"><a href="#" class="slider__dots-link">1</a></li>
+                        <li class="slider__dots-item"><a href="#" class="slider__dots-link">2</a></li>
+                        <li class="slider__dots-item"><a href="#" class="slider__dots-link">3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <script src="scripts/common.min.js"></script>
 </body>
