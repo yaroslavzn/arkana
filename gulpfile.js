@@ -4,7 +4,9 @@ const gulp = require('gulp'),
       concat = require('gulp-concat'),
       imagemin = require('gulp-imagemin'),
       del = require('del'),
-      sequence = require('gulp-sequence');
+      sequence = require('gulp-sequence'),
+      postcss = require('gulp-postcss'),
+      autoprefixer = require('autoprefixer');
 
 // Default task
 gulp.task('default', ['styles:sass', 'server']);
@@ -12,7 +14,14 @@ gulp.task('default', ['styles:sass', 'server']);
 // Compile SCSS to CSS
 gulp.task('styles:sass', function() {
     return gulp.src('src/sass/style.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass())
+        .pipe(postcss([autoprefixer({
+            'browsers': [
+                '> 1%',
+                'last 10 versions',
+                'ie 10-11'
+            ]
+        })]))
         .pipe(gulp.dest('src/css/'))
         .pipe(server.stream());
 });
@@ -23,7 +32,7 @@ gulp.task('server', ['styles:sass'], function() {
         notify: false
     });
 
-    gulp.watch("src/sass/*.scss", ['styles:sass']);
+    gulp.watch("src/sass/**/*.scss", ['styles:sass']);
     gulp.watch("src/scripts/*.js", ['scripts:concat']).on('change', server.reload);
     gulp.watch("src/*.html").on('change', server.reload);
 });
