@@ -31,8 +31,8 @@
 
 // breakpoint
 
-@mixin breakpoint($width, $type: max) {
-  @media ($type + -width: $width) {
+@mixin media($width, $type: max) {
+  @media only screen and ($type + -width: $width) {
     @content;
   }
 }
