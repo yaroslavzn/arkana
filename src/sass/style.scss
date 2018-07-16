@@ -13,4 +13,15 @@
 // config
 @import "misc/base";
 
-// sections
+// layout
+@import "layout/header";
+@import "layout/hero";
+
+// components
+@import "components/button";
+@import "components/lang";
+@import "components/search";
+@import "components/share";
+@import "components/cart";
+@import "components/main-nav";
+@import "components/slider";

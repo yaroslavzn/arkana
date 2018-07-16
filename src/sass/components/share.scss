@@ -1,0 +1,45 @@
+.share {
+  position: relative;
+}
+
+.share__link {
+  display: block;
+  width: 15px;
+  height: 17px;
+  background-image: url("../images/share.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 12px;
+}
+
+.share__socials {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .6s ease;
+}
+
+.share__socials--toggled {
+  animation: socials-toggled .6s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+.socials {
+  padding: 15px 25px;
+  background-color: $color-light;
+  box-shadow: 0px 7px 15px 0px rgba(1, 2, 3, 0.15);  
+}
+
+@keyframes socials-toggled {
+  0% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

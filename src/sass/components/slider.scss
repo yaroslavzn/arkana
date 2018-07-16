@@ -1,0 +1,72 @@
+.slider__btn {
+  height: 53px;
+  width: 53px;
+  background-color: $color-dark;
+  border-radius: 50%;
+  border: 3px solid $color-light;
+  font-size: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  &::before {
+    content: "";
+    display: block;
+    width: 11px;
+    height: 18px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--prev {
+    left: 20px;
+
+
+    &::before {
+      background-image: url("../images/arrow-prev.png");
+    }
+  }
+  
+  &--next {
+    right: 20px;
+
+    &::before {
+      background-image: url("../images/arrow-next.png");
+    }
+  }
+}
+
+.slider__dots {
+  padding-top: 26.75438%;
+}
+
+.slider__dots-list {
+  display: flex;
+  align-items: center;
+}
+
+.slider__dots-item {
+  
+  &:not(:last-child) {
+    margin-right: 7px;
+  }
+}
+
+.slider__dots-item--active {
+  .slider__dots-btn {
+    background-color: $color-dark;
+  }
+}
+
+.slider__dots-btn {
+  display: block;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: $color-light;
+  padding: 0;
+  border: 0;
+}

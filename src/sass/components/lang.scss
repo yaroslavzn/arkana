@@ -1,0 +1,72 @@
+.lang {
+  margin-right: 25px;
+  position: relative;
+}
+
+.lang__choose {
+  display: flex;
+  flex-direction: column;
+  width: 18px;
+  height: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lang__line {
+  width: 18px;
+  height: 2px;
+  background-color: $color-dark;
+}
+
+.lang__list {
+  background-color: $color-light;
+  box-shadow: 0px 7px 15px 0px rgba(1, 2, 3, 0.15);
+  padding: 15px;
+  width: 77px;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  top: 100%;
+  margin-top: 3px;
+  transition: opacity .6s ease;
+}
+
+.lang__list--toggled {
+  animation: lang-toggled .5s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes lang-toggled {
+  0% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.lang__item {
+  line-height: 1;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+.lang__link {
+  &:link,
+  &:visited {
+    color: $color-grey;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 500;
+    transition: all .2s ease;
+  }
+
+  &:hover {
+    color: $color-dark;
+  }
+}

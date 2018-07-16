@@ -1,0 +1,24 @@
+.hero {
+  background-image: url("../images/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 17.1875%;
+  padding-bottom: 34px;
+  position: relative;
+}
+
+.hero__heading {
+  font-size: 56px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero__text {
+  margin-bottom: 45px;
+
+  p {
+    font-size: 13px;
+    color: #7f7f7f;
+    max-width: 355px;
+  }
+}

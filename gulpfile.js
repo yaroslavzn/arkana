@@ -14,7 +14,7 @@ gulp.task('default', ['styles:sass', 'server']);
 // Compile SCSS to CSS
 gulp.task('styles:sass', function() {
     return gulp.src('src/sass/style.scss')
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(postcss([autoprefixer({
             'browsers': [
                 '> 1%',

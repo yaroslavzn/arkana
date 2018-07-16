@@ -1,0 +1,29 @@
+.cart__link {
+  display: block;
+  width: 20px;
+  height: 19px;
+  background-image: url("../images/cart.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.cart__counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  background-color: $color-dark;
+  border-radius: 50%;
+  color: $color-light;
+  font-size: 8px;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.cart {
+  display: none;
+}

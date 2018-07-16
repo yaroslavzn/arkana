@@ -1,0 +1,18 @@
+.btn {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: $color-light;
+  background-color: $color-dark;
+  padding: 20px 45px;
+  transition: all .2s ease;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: lighten($color: $color-dark, $amount: 25%);
+  }
+}
