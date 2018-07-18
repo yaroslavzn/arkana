@@ -14,23 +14,20 @@
             <div class="container">
                 <div class="header__top">
                     <div class="lang">
-                        <a href="#" class="lang__choose">
+                        <a href="#" class="lang__choose headerPopupTrigger lang__trigger">
                             <span class="visually-hidden">Choose language</span>
-                            <span class="lang__line"></span>
-                            <span class="lang__line"></span>
-                            <span class="lang__line"></span>
                         </a>
-                        <ul class="lang__list">
+                        <ul class="lang__list lang__trigger-off">
                             <li class="lang__item"><a href="#" class="lang__link">English</a></li>
                             <li class="lang__item"><a href="#" class="lang__link">French</a></li>
                             <li class="lang__item"><a href="#" class="lang__link">Spain</a></li>
                         </ul>
                     </div>
                     <div class="search">
-                        <a href="#" class="search__trigger">
+                        <a href="#" class="search__trigger headerPopupTrigger">
                             <span class="visually-hidden">Search form trigger</span>
                         </a>
-                        <form class="search__form">
+                        <form class="search__form search__trigger-off">
                             <input type="text" class="search__input">
                             <button type="submit" class="search__btn">
                                 <span class="visually-hidden">Search</span>
@@ -41,10 +38,10 @@
                         <img src="images/logo.png" alt="Arkana logo" width="187" height="18" class="logo__img">
                     </div>
                     <div class="share header__share">
-                        <a href="#" class="share__link">
+                        <a href="#" class="share__link headerPopupTrigger share__trigger">
                             <span class="visually-hidden">Share</span>
                         </a>
-                        <ul class="socials share__socials">
+                        <ul class="socials share__socials share__trigger-off">
                             <li class="socials__item">
                                 <a href="#" class="socials__link">
                                     <span class="visually-hidden">Facebook</span>
@@ -80,94 +77,101 @@
                         </ul>
                     </div>
                     <div class="cart__wrapper">
-                        <a href="#" class="cart__link">
+                        <a href="#" class="cart__link headerPopupTrigger cart__trigger">
                             <span class="visually-hidden">Cart</span>
                             <span class="cart__counter">3</span>
                         </a>
-                        <div class="cart">
-                            <h2 class="cart__title">Shopping cart</h2>
-                            <ul class="cart-goods">
-                                <li class="cart-goods__item">
-                                    <div class="cart-goods__pic">
-                                        <img src="" alt="Happy intarsia crewneck sweater" class="cart-goods__img">
-                                    </div>
-                                    <div class="cart-goods__desc">
-                                        <h3 class="cart-goods__title">Happy intarsia crewneck sweater</h3>
-                                        <p class="cart-goods__size">
-                                            Size: <span>S</span>
-                                        </p>
-                                        <p class="cart-goods__color">
-                                            Color: <span>Blue</span>
-                                        </p>
-                                        <p class="cart-goods__price">
-                                            $24.95 <span class="cart-goods__times">x</span> <span class="cart-goods__count">2</span>
-                                        </p>
-                                    </div>
-                                    <span class="cart__del-item">x</span>
-                                </li>
-                                <li class="cart-goods__item">
-                                    <div class="cart-goods__pic">
-                                        <img src="" alt="Happy intarsia crewneck sweater" class="cart-goods__img">
-                                    </div>
-                                    <div class="cart-goods__desc">
-                                        <h3 class="cart-goods__title">Happy intarsia crewneck sweater</h3>
-                                        <p class="cart-goods__size">
-                                            Size: <span>S</span>
-                                        </p>
-                                        <p class="cart-goods__color">
-                                            Color: <span>Blue</span>
-                                        </p>
-                                        <p class="cart-goods__price">
-                                            $24.95 <span class="cart-goods__times">x</span> <span class="cart-goods__count">2</span>
-                                        </p>
-                                    </div>
-                                    <span class="cart__del-item">x</span>
-                                </li>
-                                <li class="cart-goods__item">
-                                    <div class="cart-goods__pic">
-                                        <img src="" alt="Happy intarsia crewneck sweater" class="cart-goods__img">
-                                    </div>
-                                    <div class="cart-goods__desc">
-                                        <h3 class="cart-goods__title">Happy intarsia crewneck sweater</h3>
-                                        <p class="cart-goods__size">
-                                            Size: <span>S</span>
-                                        </p>
-                                        <p class="cart-goods__color">
-                                            Color: <span>Blue</span>
-                                        </p>
-                                        <p class="cart-goods__price">
-                                            $24.95 <span class="cart-goods__times">x</span> <span class="cart-goods__count">2</span>
-                                        </p>
-                                    </div>
-                                    <span class="cart__del-item">x</span>
-                                </li>
-                            </ul>
-                            <div class="cart-bill">
-                                <div class="cart-bill__top">
-                                    <table class="cart-bill__parts">
-                                        <tr>
-                                            <td class="card-bill__name">3 items</td>
-                                            <td class="card-bill__price">42.95 $</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="card-bill__name">Shipping</td>
-                                            <td class="card-bill__price">7.00 $</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="card-bill__name">Taxes</td>
-                                            <td class="card-bill__price">0 $</td>
-                                        </tr>
-                                    </table>
+                        <div class="cart__overlay cart__trigger-off">
+                            <div class="cart">
+                                <div class="cart__head">
+                                    <h2 class="cart__title">Shopping cart</h2>
+                                    <button class="cart__close" type="button">
+                                        <span class="visually-hidden">Close cart</span>
+                                    </button>
                                 </div>
-                                <div class="cart-bill__bottom">
-                                    <table class="cart-bill__total">
-                                        <tr>
-                                            <td class="card-bill__name">Total</td>
-                                            <td class="card-bill__price">42.95 $</td>
-                                        </tr>
-                                    </table>
+                                <ul class="cart__goods">
+                                    <li class="cart__goods-item">
+                                        <div class="cart__goods-pic">
+                                            <img src="images/cart-goods1.jpg" alt="Happy intarsia crewneck sweater" class="cart__goods-img" width="78" height="103">
+                                        </div>
+                                        <div class="cart__goods-desc">
+                                            <h3 class="cart__goods-title">Happy intarsia crewneck sweater</h3>
+                                            <p class="cart__goods-text">
+                                                Size: <span>S</span><br>
+                                                Color: <span>Blue</span>
+                                            </p>
+                                            <p class="cart__goods-price">
+                                                $24.95 <span class="cart__goods-times">x</span> <span class="cart__goods-count">2</span>
+                                            </p>
+                                        </div>
+                                        <button type="button" class="cart__del-item">
+                                            <span class="visually-hidden">Remove item</span>
+                                        </button>
+                                    </li>
+                                    <li class="cart__goods-item">
+                                        <div class="cart__goods-pic">
+                                            <img src="images/cart-goods2.jpg" alt="Happy intarsia crewneck sweater" class="cart__goods-img" width="78" height="103">
+                                        </div>
+                                        <div class="cart__goods-desc">
+                                            <h3 class="cart__goods-title">Happy intarsia crewneck sweater</h3>
+                                            <p class="cart__goods-text">
+                                                Size: <span>S</span><br>
+                                                Color: <span>Blue</span>
+                                            </p>
+                                            <p class="cart__goods-price">
+                                                $24.95 <span class="cart__goods-times">x</span> <span class="cart__goods-count">2</span>
+                                            </p>
+                                        </div>
+                                        <button type="button" class="cart__del-item">
+                                            <span class="visually-hidden">Remove item</span>
+                                        </button>
+                                    </li>
+                                    <li class="cart__goods-item">
+                                        <div class="cart__goods-pic">
+                                            <img src="images/cart-goods3.jpg" alt="Happy intarsia crewneck sweater" class="cart__goods-img" width="78" height="103">
+                                        </div>
+                                        <div class="cart__goods-desc">
+                                            <h3 class="cart__goods-title">Happy intarsia crewneck sweater</h3>
+                                            <p class="cart__goods-text">
+                                                Size: <span>S</span><br>
+                                                Color: <span>Blue</span>
+                                            </p>
+                                            <p class="cart__goods-price">
+                                                $24.95 <span class="cart__goods-times">x</span> <span class="cart__goods-count">2</span>
+                                            </p>
+                                        </div>
+                                        <button type="button" class="cart__del-item">
+                                            <span class="visually-hidden">Remove item</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <div class="cart__bill">
+                                    <div class="cart__bill-top">
+                                        <table class="cart__bill-table">
+                                            <tr>
+                                                <td class="cart__bill-name">3 items</td>
+                                                <td class="cart__bill-price">42.95 $</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cart__bill-name">Shipping</td>
+                                                <td class="cart__bill-price">7.00 $</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cart__bill-name">Taxes</td>
+                                                <td class="cart__bill-price">0 $</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="cart__bill-bottom">
+                                        <table class="cart__bill-table">
+                                            <tr>
+                                                <td class="cart__bill-name cart__bill-name--uppercase">Total</td>
+                                                <td class="cart__bill-price cart__bill-price--large">42.95 $</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <a href="#" class="cart__bill-link">Processed to checkout</a>
                                 </div>
-                                <a href="#" class="cart-bill__link">Processed to checkout</a>
                             </div>
                         </div>
                     </div>

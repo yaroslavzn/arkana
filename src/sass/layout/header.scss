@@ -4,6 +4,13 @@
   top: 0;
   width: 100%;
   z-index: 10;
+  transition: all .3s ease;
+}
+
+.page-header--sticky {
+  background-color: #f9f9f9;
+  box-shadow: 0 10px 30px rgba(#000, .35);
+  padding-bottom: 30px;
 }
 
 .header__top {

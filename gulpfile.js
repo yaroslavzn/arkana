@@ -49,7 +49,8 @@ gulp.task('server', ['styles:sass'], function() {
 // Make one script file from all
 gulp.task('scripts:concat', function() {
     return gulp.src([
-        'src/scripts/temp.js'
+        'src/scripts/header-show-blocks.js',
+        'src/scripts/sticky-header.js'
     ])
         .pipe(concat('script.js'))
         .pipe(gulp.dest('src/scripts/'));

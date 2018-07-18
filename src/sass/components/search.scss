@@ -16,13 +16,19 @@
   margin-top: 3px;
   opacity: 0;
   visibility: hidden;  
-  transition: opacity .6s ease;
+  transition: opacity .6s ease, visibility .6s ease, transform .6s ease;
 }
 
-.search__form--toggled {
+.search__trigger-on {
   animation: search-toggled .6s ease;
   opacity: 1;
   visibility: visible;
+}
+
+.search__trigger-off {
+  animation: search-trigger-off .6s ease;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .search__input {
@@ -49,5 +55,11 @@
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes search-trigger-off {
+  100% {
+    transform: translateY(-30px);
   }
 }

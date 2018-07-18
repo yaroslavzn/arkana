@@ -4,18 +4,8 @@
 }
 
 .lang__choose {
-  display: flex;
-  flex-direction: column;
-  width: 18px;
-  height: 12px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.lang__line {
-  width: 18px;
-  height: 2px;
-  background-color: $color-dark;
+  @include sprite($menu);
+  display: block;
 }
 
 .lang__list {
@@ -25,17 +15,21 @@
   width: 77px;
   position: absolute;
   left: 0;
-  opacity: 0;
-  visibility: hidden;
   top: 100%;
   margin-top: 3px;
-  transition: opacity .6s ease;
+  transition: opacity .6s ease, visibility .6s ease, transform .6s ease;
 }
 
-.lang__list--toggled {
-  animation: lang-toggled .5s ease;
+.lang__trigger-on {
+  animation: lang-toggled .6s ease;
   opacity: 1;
   visibility: visible;
+}
+
+.lang__trigger-off {
+  opacity: 0;
+  visibility: hidden;
+  animation: lang-toggle-off .6s ease;
 }
 
 @keyframes lang-toggled {
@@ -45,6 +39,12 @@
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes lang-toggle-off {
+  100% {
+    transform: translateY(-30px);
   }
 }
 
