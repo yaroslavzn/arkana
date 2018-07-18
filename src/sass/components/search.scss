@@ -4,11 +4,7 @@
 
 .search__trigger {
   display: block;
-  width: 18px;
-  height: 18px;
-  background-image: url("../images/search-ico.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  @include sprite($search-ico);
 }
 
 .search__form {
@@ -37,11 +33,7 @@
 }
 
 .search__btn {
-  width: 18px;
-  height: 18px;
-  background-image: url("../images/search-ico-btn.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  @include sprite($search-ico-btn);
   background-color: transparent;
   border: 0;
   position: absolute;

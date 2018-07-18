@@ -4,11 +4,7 @@
 
 .share__link {
   display: block;
-  width: 15px;
-  height: 17px;
-  background-image: url("../images/share.png");
-  background-position: center;
-  background-repeat: no-repeat;
+  @include sprite($share);
   font-size: 12px;
 }
 
@@ -31,7 +27,25 @@
 .socials {
   padding: 15px 25px;
   background-color: $color-light;
-  box-shadow: 0px 7px 15px 0px rgba(1, 2, 3, 0.15);  
+  box-shadow: 0px 7px 15px 0px rgba(1, 2, 3, 0.15);
+  display: flex;  
+}
+
+.socials__item {
+  &:not(:last-child) {
+    margin-right: 18px;
+  }
+}
+
+.socials__icon {
+  width: 15px;
+  height: 15px;
+  fill: $color-dark;
+  transition: fill .2s ease;
+
+  &:hover {
+    fill: lighten($color: $color-dark, $amount: 25%);
+  }
 }
 
 @keyframes socials-toggled {

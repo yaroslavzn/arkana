@@ -1,0 +1,145 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$arrow-next-name: 'arrow-next';
+$arrow-next-x: 38px;
+$arrow-next-y: 0px;
+$arrow-next-offset-x: -38px;
+$arrow-next-offset-y: 0px;
+$arrow-next-width: 11px;
+$arrow-next-height: 18px;
+$arrow-next-total-width: 49px;
+$arrow-next-total-height: 37px;
+$arrow-next-image: '../images/sprite.png';
+$arrow-next: (38px, 0px, -38px, 0px, 11px, 18px, 49px, 37px, '../images/sprite.png', 'arrow-next', );
+$arrow-prev-name: 'arrow-prev';
+$arrow-prev-x: 38px;
+$arrow-prev-y: 18px;
+$arrow-prev-offset-x: -38px;
+$arrow-prev-offset-y: -18px;
+$arrow-prev-width: 11px;
+$arrow-prev-height: 18px;
+$arrow-prev-total-width: 49px;
+$arrow-prev-total-height: 37px;
+$arrow-prev-image: '../images/sprite.png';
+$arrow-prev: (38px, 18px, -38px, -18px, 11px, 18px, 49px, 37px, '../images/sprite.png', 'arrow-prev', );
+$cart-name: 'cart';
+$cart-x: 0px;
+$cart-y: 0px;
+$cart-offset-x: 0px;
+$cart-offset-y: 0px;
+$cart-width: 20px;
+$cart-height: 19px;
+$cart-total-width: 49px;
+$cart-total-height: 37px;
+$cart-image: '../images/sprite.png';
+$cart: (0px, 0px, 0px, 0px, 20px, 19px, 49px, 37px, '../images/sprite.png', 'cart', );
+$search-ico-btn-name: 'search-ico-btn';
+$search-ico-btn-x: 20px;
+$search-ico-btn-y: 0px;
+$search-ico-btn-offset-x: -20px;
+$search-ico-btn-offset-y: 0px;
+$search-ico-btn-width: 18px;
+$search-ico-btn-height: 18px;
+$search-ico-btn-total-width: 49px;
+$search-ico-btn-total-height: 37px;
+$search-ico-btn-image: '../images/sprite.png';
+$search-ico-btn: (20px, 0px, -20px, 0px, 18px, 18px, 49px, 37px, '../images/sprite.png', 'search-ico-btn', );
+$search-ico-name: 'search-ico';
+$search-ico-x: 0px;
+$search-ico-y: 19px;
+$search-ico-offset-x: 0px;
+$search-ico-offset-y: -19px;
+$search-ico-width: 18px;
+$search-ico-height: 18px;
+$search-ico-total-width: 49px;
+$search-ico-total-height: 37px;
+$search-ico-image: '../images/sprite.png';
+$search-ico: (0px, 19px, 0px, -19px, 18px, 18px, 49px, 37px, '../images/sprite.png', 'search-ico', );
+$share-name: 'share';
+$share-x: 18px;
+$share-y: 19px;
+$share-offset-x: -18px;
+$share-offset-y: -19px;
+$share-width: 15px;
+$share-height: 17px;
+$share-total-width: 49px;
+$share-total-height: 37px;
+$share-image: '../images/sprite.png';
+$share: (18px, 19px, -18px, -19px, 15px, 17px, 49px, 37px, '../images/sprite.png', 'share', );
+$spritesheet-width: 49px;
+$spritesheet-height: 37px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($arrow-next, $arrow-prev, $cart, $search-ico-btn, $search-ico, $share, );
+$spritesheet: (49px, 37px, '../images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
